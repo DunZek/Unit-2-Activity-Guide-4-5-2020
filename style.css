@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color: #555;
+    color:#fff;
+    font-family: "Opens sans", Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+}
+#website_header{
+    display:block;
+    height:75px;
+    overflow:hidden;
+    margin-bottom:40px;
+
+    background-color: burlywood;
+}
+#website_header h1{
+    font-size:28px;
+    margin:15px 31px;
+    line-height: 1.6em;
+}
+#website_content{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 3%;
+    margin: auto;
+    width:95%;
+    margin-bottom: 40px;
+
+}
+#content_nav{
+    background-color: rgb(95, 158, 160);
+    height:412px;
+    float:left;
+}
+#content_nav #nav_top, #nav_bottom{
+    display:block;
+    padding:20px;
+}
+/* Highlighting the navbar
+#website_nav #nav_top{
+    background-color: chartreuse;
+}
+#website_nav #nav_bottom{
+    background-color: chocolate;
+}
+*/
+#content_nav hr{
+    margin:0 20px
+}
+#content_nav h6{
+    font-size:18px;
+    margin-bottom:10px;
+    display:inline-block;
+}
+/*Hamburger button START*/
+    #hamburger_icon{
+        display: inline-block;
+        cursor:pointer;
+        position: relative;
+        right:-30px;
+    }
+    #hamburger_icon #top,#mid,#bottom{
+        width:25px;
+        height:4px;
+        margin: 4px 0;
+        background-color: white;
+        position: relative;
+        transition: 0.3s;
+    }
+    .hamburgerOpen #top{
+        transform: rotate(-45deg);
+        top:8px;
+    }
+    .hamburgerOpen #mid{
+        opacity:0;
+    }
+    .hamburgerOpen #bottom{
+        transform: rotate(45deg);
+        top:-8px;
+    }
+/*Hamburger button END*/
+#content_nav a{
+    font-size: 14px;
+    text-decoration: none;
+    color:white;
+    display:block;
+    padding: 5px 14px;
+    box-sizing: border-box;
+}
+#content_nav a:hover{
+    background-color: rgb(135, 198, 200);
+}
+#content_nav a.selected{
+    background-color: rgb(115, 178, 180);
+}
+#content_nav a.selected:hover{
+    background-color: rgb(135, 198, 200); 
+}
+#content_main section{
+    padding:40px 0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 50px;
+    background-color: rgb(212, 74, 49);
+}
+#content_main section h2{
+    font-size: 30px;
+    padding:20px 5%;
+    line-height: 1.8em;
+}
+.sections_articles h3{
+    padding:20px 5%;
+    line-height: 1.8em;
+}
+.sections_articles p, ul, li{
+    font-size: 17px;
+    line-height: 1.8em;
+}
+.sections_articles ul{
+    padding:0 10%;
+}
+.sections_articles p{
+    padding:0 5%;
+}
+#content_main hr{
+    color:rgb(80, 79, 79);
+    width:85%;
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+@media(max-width:600px){
+    #website_header{
+        height:50px;
+        text-align: center;
+    }
+    #website_header h1{
+        margin:10px 31px;
+        font-size:18px;
+    }
+    #website_content{
+        grid-template-columns:none;
+        grid-template-rows: 470px 1fr;
+    }
+    #content_nav{
+        height:470px;
+    }
+    #hamburger_icon{
+        float:right;
+        top:0;
+        right:0;
+    }
+    #content_nav a{
+        font-size:18px;
+        padding:10px 14px;
+    }
+}
