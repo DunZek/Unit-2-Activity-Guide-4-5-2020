@@ -126,6 +126,10 @@ body{
 .sections_articles p{
     padding:0 5%;
 }
+.sections_articles h4{
+    padding:0 5%;
+
+}
 #content_main hr{
     color:rgb(80, 79, 79);
     width:85%;
